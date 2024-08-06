@@ -1,5 +1,7 @@
 ## Openstack helper scripts ##
 
+### Project Overview ###
+
 This repository contains a set of scripts that assist in the administration of large Openstack private clouds
 
 
@@ -20,6 +22,4 @@ openstack-snapshot-export-backup.sh - This script exports snapshots directly fro
 
 openstack-snapshotvms-tags.sh - This script creates snapshots in Openstack if the storage backend supports them
 
-
-passive-check-mon-tf.sh
 
