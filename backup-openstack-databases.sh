@@ -2,6 +2,7 @@
 
 backup_dir="/openstack/backup/openstack-databases"
 KEEPDAYS=7
+DBPASS=""
 
 declare -a Databases=(
 aodh
@@ -31,7 +32,7 @@ do
 
   # Dump the current DB
   echo "$(date): Currently dumping database: ${db}"
-  /usr/bin/mysqldump -uroot -pEvoOpnStackRul3z -h infra1_galera_container-56032a45 ${db} | gzip > $filename
+  /usr/bin/mysqldump -uroot -p${DBPASS} -h infra1_galera_container-56032a45 ${db} | gzip > $filename
 done
 
 # CLEANUP
